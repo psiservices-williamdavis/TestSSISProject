@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="00-Load_Base_Tables_Aspen"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{8CC7F064-E4A4-4EFB-929C-67DFC108ECBF}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{7803C674-8C9E-4746-8A94-7E92A773D9BF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -14488,17 +14488,29 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="148,41.6"
+          Id="Package\Rebuild Tables"
+          TopLeft="457.166652295325,462.100002913475" />
+        <NodeLayout
+          Size="167.2,41.6"
+          Id="Package\Sequence Container\Aspen Applications"
+          TopLeft="53.8333326048322,154.233334276941" />
+        <NodeLayout
           Size="142.4,41.6"
           Id="Package\Sequence Container\Aspen Clients"
           TopLeft="45.7999921520555,22.2333341942893" />
+        <NodeLayout
+          Size="178.4,41.6"
+          Id="Package\Sequence Container\Aspen Exam Portions"
+          TopLeft="221.433323465454,22.7666670041614" />
         <NodeLayout
           Size="142.4,41.6"
           Id="Package\Sequence Container\Aspen Exams"
           TopLeft="53.0999956289928,88.9666677686904" />
         <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\Sequence Container\Aspen Exam Portions"
-          TopLeft="221.433323465454,22.7666670041614" />
+          Size="143.2,41.6"
+          Id="Package\Sequence Container\Aspen Person"
+          TopLeft="437.166649513775,86.9666673141056" />
         <NodeLayout
           Size="154.4,41.6"
           Id="Package\Sequence Container\Aspen Schedule"
@@ -14507,14 +14519,6 @@
           Size="148,41.6"
           Id="Package\Sequence Container\Aspen Schools"
           TopLeft="443.933317008284,22.9666665289137" />
-        <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\Sequence Container\Aspen Person"
-          TopLeft="437.166649513775,86.9666673141056" />
-        <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Sequence Container\Aspen Applications"
-          TopLeft="53.8333326048322,154.233334276941" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -14548,10 +14552,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="148,41.6"
-          Id="Package\Rebuild Tables"
-          TopLeft="457.166652295325,462.100002913475" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="530.866655970945,426.50000035127">
@@ -14577,6 +14577,77 @@
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\Sequence Container\Aspen Applications">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\Sequence Container\Aspen Applications\query aspen applications"
+          TopLeft="470.5,60.5" />
+        <NodeLayout
+          Size="207.2,41.6"
+          Id="Package\Sequence Container\Aspen Applications\ampdb_Aspen_Applications"
+          TopLeft="483.5,239.5" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Aspen Applications.Paths[OLE DB Source Output]"
+          TopLeft="567.3,102.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.8000000000001,137.4"
+              Start="0,0"
+              End="19.8000000000001,129.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,64.7"
+                    Point2="0,68.7"
+                    Point3="4,68.7" />
+                  <mssgle:LineSegment
+                    End="15.8000000000001,68.7" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.8000000000001,68.7"
+                    Point2="19.8000000000001,68.7"
+                    Point3="19.8000000000001,72.7" />
+                  <mssgle:LineSegment
+                    End="19.8000000000001,129.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Aspen Applications\ampdb_Aspen_Applications">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Aspen Applications\query aspen applications">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Sequence Container\Aspen Clients">
     <LayoutInfo>
@@ -14616,14 +14687,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Clients\query aspen clients">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Aspen Clients\ampdb_Aspen_Clients">
     <Properties>
       <Property>
@@ -14636,62 +14699,11 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Sequence Container\Aspen Exams">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="168.8,41.6"
-          Id="Package\Sequence Container\Aspen Exams\query aspen exams"
-          TopLeft="464.5,148.5" />
-        <NodeLayout
-          Size="183.2,41.6"
-          Id="Package\Sequence Container\Aspen Exams\ampdb_Aspen_Exams"
-          TopLeft="461.5,305.5" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Aspen Exams.Paths[OLE DB Source Output]"
-          TopLeft="551,190.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,115.4"
-              Start="0,0"
-              End="0,107.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,107.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Exams\query aspen exams">
+    design-time-name="Package\Sequence Container\Aspen Clients\query aspen clients">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Exams\ampdb_Aspen_Exams">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -14746,14 +14758,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Exam Portions\query aspen exam portions">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Aspen Exam Portions\ampdb_Aspen_Exam_Portions">
     <Properties>
       <Property>
@@ -14766,33 +14770,41 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Aspen Exam Portions\query aspen exam portions">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Sequence Container\Aspen Schedule">
+    design-time-name="Package\Sequence Container\Aspen Exams">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="180,41.6"
-          Id="Package\Sequence Container\Aspen Schedule\query aspen schedule"
-          TopLeft="453.5,62.5" />
+          Size="168.8,41.6"
+          Id="Package\Sequence Container\Aspen Exams\query aspen exams"
+          TopLeft="464.5,148.5" />
         <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\Sequence Container\Aspen Schedule\ampdb_Aspen_Schedule"
-          TopLeft="445.5,200.5" />
+          Size="183.2,41.6"
+          Id="Package\Sequence Container\Aspen Exams\ampdb_Aspen_Exams"
+          TopLeft="461.5,305.5" />
         <EdgeLayout
-          Id="Package\Sequence Container\Aspen Schedule.Paths[OLE DB Source Output]"
-          TopLeft="543.1,104.1">
+          Id="Package\Sequence Container\Aspen Exams.Paths[OLE DB Source Output]"
+          TopLeft="551,190.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,96.4"
+              EndConnector="0,115.4"
               Start="0,0"
-              End="0,88.9">
+              End="0,107.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,88.9" />
+                    End="0,107.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -14805,15 +14817,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Schedule\query aspen schedule">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Schedule\ampdb_Aspen_Schedule">
+    design-time-name="Package\Sequence Container\Aspen Exams\ampdb_Aspen_Exams">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -14825,74 +14829,11 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Sequence Container\Aspen Schools">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="211.2,41.6"
-          Id="Package\Sequence Container\Aspen Schools\query ampdb Aspen Schools"
-          TopLeft="453.5,62.5" />
-        <NodeLayout
-          Size="188,41.6"
-          Id="Package\Sequence Container\Aspen Schools\ampdb_Aspen_Schools"
-          TopLeft="448.5,220.5" />
-        <EdgeLayout
-          Id="Package\Sequence Container\Aspen Schools.Paths[OLE DB Source Output]"
-          TopLeft="559.1,104.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-16.6,116.4"
-              Start="0,0"
-              End="-16.6,108.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,54.2"
-                    Point2="0,58.2"
-                    Point3="-4,58.2" />
-                  <mssgle:LineSegment
-                    End="-12.6,58.2" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12.6,58.2"
-                    Point2="-16.6,58.2"
-                    Point3="-16.6,62.2" />
-                  <mssgle:LineSegment
-                    End="-16.6,108.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Schools\query ampdb Aspen Schools">
+    design-time-name="Package\Sequence Container\Aspen Exams\query aspen exams">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Schools\ampdb_Aspen_Schools">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -14947,14 +14888,6 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Person\query aspen person">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container\Aspen Person\ampdb_Aspen_Person">
     <Properties>
       <Property>
@@ -14967,45 +14900,41 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Aspen Person\query aspen person">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Sequence Container\Aspen Applications">
+    design-time-name="Package\Sequence Container\Aspen Schedule">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="193.6,41.6"
-          Id="Package\Sequence Container\Aspen Applications\query aspen applications"
-          TopLeft="470.5,60.5" />
+          Size="180,41.6"
+          Id="Package\Sequence Container\Aspen Schedule\query aspen schedule"
+          TopLeft="453.5,62.5" />
         <NodeLayout
-          Size="207.2,41.6"
-          Id="Package\Sequence Container\Aspen Applications\ampdb_Aspen_Applications"
-          TopLeft="483.5,239.5" />
+          Size="194.4,41.6"
+          Id="Package\Sequence Container\Aspen Schedule\ampdb_Aspen_Schedule"
+          TopLeft="445.5,200.5" />
         <EdgeLayout
-          Id="Package\Sequence Container\Aspen Applications.Paths[OLE DB Source Output]"
-          TopLeft="567.3,102.1">
+          Id="Package\Sequence Container\Aspen Schedule.Paths[OLE DB Source Output]"
+          TopLeft="543.1,104.1">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19.8000000000001,137.4"
+              EndConnector="0,96.4"
               Start="0,0"
-              End="19.8000000000001,129.9">
+              End="0,88.9">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,64.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,64.7"
-                    Point2="0,68.7"
-                    Point3="4,68.7" />
-                  <mssgle:LineSegment
-                    End="15.8000000000001,68.7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15.8000000000001,68.7"
-                    Point2="19.8000000000001,68.7"
-                    Point3="19.8000000000001,72.7" />
-                  <mssgle:LineSegment
-                    End="19.8000000000001,129.9" />
+                    End="0,88.9" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -15018,15 +14947,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Applications\query aspen applications">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container\Aspen Applications\ampdb_Aspen_Applications">
+    design-time-name="Package\Sequence Container\Aspen Schedule\ampdb_Aspen_Schedule">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15035,6 +14956,85 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Aspen Schedule\query aspen schedule">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Sequence Container\Aspen Schools">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="211.2,41.6"
+          Id="Package\Sequence Container\Aspen Schools\query ampdb Aspen Schools"
+          TopLeft="453.5,62.5" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Sequence Container\Aspen Schools\ampdb_Aspen_Schools"
+          TopLeft="448.5,220.5" />
+        <EdgeLayout
+          Id="Package\Sequence Container\Aspen Schools.Paths[OLE DB Source Output]"
+          TopLeft="559.1,104.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.6,116.4"
+              Start="0,0"
+              End="-16.6,108.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54.2"
+                    Point2="0,58.2"
+                    Point3="-4,58.2" />
+                  <mssgle:LineSegment
+                    End="-12.6,58.2" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-12.6,58.2"
+                    Point2="-16.6,58.2"
+                    Point3="-16.6,62.2" />
+                  <mssgle:LineSegment
+                    End="-16.6,108.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Aspen Schools\ampdb_Aspen_Schools">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container\Aspen Schools\query ampdb Aspen Schools">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
