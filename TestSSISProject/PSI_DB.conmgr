@@ -1,0 +1,16 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="PSI_DB"
+  DTS:DTSID="{6E1F36A3-8B5D-4AA4-8633-AACEEF034F5C}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=lcdev1db.resources.psi;User ID=william.davis;Initial Catalog=psi_db_LCDEV1;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAexms2b4yrEiw2XUN4IoAsQAAAAACAAAAAAADZgAAwAAAABAAAACUqq/EyJui8p8stCIg6GsqAAAAAASAAACgAAAAEAAAAEfGz2sQIFRjercxleJfsEOAAAAAeMFT7AP1kta5//2NlhRxxQbvZCZvdFdpKrAOGCeEbIc9xHGG1s6vqzlGQUpfz93gsdDe80XFfF8A7k3SimhxDjtJWcSQPMxZlCbHoE1c3dfwbrv7/C3u8UJZ0r5vvtfYu8tSfjQOUIJ8DmeBreQO8pCjh98nRu4ujH83SGsUzMsUAAAAeluCaANs++2/q4qCgvz+5LS9UIk=</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
